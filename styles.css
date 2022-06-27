@@ -1,3 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0%;
+    margin: 0%;
+}
+
 body {
     font-family: 'Titillium Web', sans-serif;
+    margin: 0px;
 }
+
+.button {
+    background-color: white;
+    border: 1px solid #1A2441;
+    color: #1A2441;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0px 10px 0px 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #1A2441;
+    color: white;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.image-container {
+    flex: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    padding: 0px;
+}
+
+#image {
+    flex: 50%;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    padding: 0px;
+}
+
+.headline-container {
+    flex: 50%;  
+    background-color: #1A2441;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    padding: 0px;
+}
+
+#headline {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+    margin: 10% 0;
+    min-height: 200px;
+    align-items: center;
+    padding: 0% 20% 0% 10%;
+}
+
+#selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    /* margin-top: 10px; */
+}
+
+@media all and (max-width: 500px)  {
+    .header-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #image {
+        margin-right: 0px;
+    }
+
+    .headline-container {
+        margin-left: 0px;
+    }
+
+    #headline {
+        padding: 0% 10% 0% 10%;
+        min-height: 150px;
+    }
+
+    #selector {
+        padding: 0%;
+        margin:  0%;
+    }
+
+    .button {
+        background-color: #CCCCCD;
+        border: 1px solid white;
+        color: white;
+        padding: 20% 10% 20% 10%;
+        margin: 0%;
+        text-align: center;
+        text-decoration: none;
+        /* display: inline-block; */
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    .button:hover {
+        background-color: white;
+        color: #1A2441;
+    }
+
+}
+
+   
+  
