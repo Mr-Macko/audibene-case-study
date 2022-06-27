@@ -36,7 +36,6 @@ async function fetchProducts() {
             button3.innerHTML = product3.name.desktop;
             button4.innerHTML = product4.name.desktop;
         }
-        if (mobileView.matches) {}
     }
 
     // shows headline and image to the respective product
@@ -113,3 +112,4 @@ async function fetchProducts() {
 };
 
 fetchProducts();
+
