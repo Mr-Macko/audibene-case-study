@@ -20,7 +20,7 @@ async function fetchProducts() {
     let button3 = document.getElementById('button3');
     let button4 = document.getElementById('button4');
  
-    // triggers buttons and layout for mobile devies
+    // triggers layout for mobile
     const mobileSize = window.matchMedia("(max-width: 500px)") 
 
     // button elements for desktop & mobile
