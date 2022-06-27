@@ -21,6 +21,24 @@ fetchProducts();
     let button3 = document.getElementById('button3');
     let button4 = document.getElementById('button4');
  
+    // triggers elements and layout for mobile devies
+    const mobileView = window.matchMedia("(max-width: 500px)") 
+
+    // buttons elements for desktop & mobile
+    function view () {
+        if (mobileView.matches) {
+            button1.innerHTML = product1.name.mobile;
+            button2.innerHTML = product2.name.mobile;
+            button3.innerHTML = product3.name.mobile;
+            button4.innerHTML = product4.name.mobile;
+        } else { 
+            button1.innerHTML = product1.name.desktop;
+            button2.innerHTML = product2.name.desktop;
+            button3.innerHTML = product3.name.desktop;
+            button4.innerHTML = product4.name.desktop;
+        }
+    }
+    
     // shows headline and image to the respective product
     function handleProduct1() {
         headline.innerHTML = product1.text; 
@@ -74,4 +92,7 @@ fetchProducts();
     }
 
     handleProduct1();
+    window.onresize = view;
+};
+
 fetchProducts();
