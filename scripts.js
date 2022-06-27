@@ -21,5 +21,57 @@ fetchProducts();
     let button3 = document.getElementById('button3');
     let button4 = document.getElementById('button4');
  
+    // shows headline and image to the respective product
+    function handleProduct1() {
+        headline.innerHTML = product1.text; 
+        if (mobileView.matches) {
+            image.src = product1.img.mobile;
+        } else { 
+         image.src = product1.img.desktop;
+        }
+    }
+    function handleProduct2() {
+        headline.innerHTML = product2.text; 
+        if (mobileView.matches) {
+            image.src = product2.img.mobile;
+        } else { 
+         image.src = product2.img.desktop;
+        }
+   }
+   function handleProduct3() {
+        headline.innerHTML = product3.text; 
+        if (mobileView.matches) {
+            image.src = product3.img.mobile;
+        } else { 
+        image.src = product3.img.desktop;
+        }
+    }
+    function handleProduct4() {
+        headline.innerHTML = product4.text; 
+        if (mobileView.matches) {
+            image.src = product4.img.mobile;
+        } else { 
+         image.src = product4.img.desktop;
+        }
+   }
 
+   // shows the respective product when clicked
+   let selector = document.getElementById('selector');
+    selector.addEventListener("click", showProduct);
 
+    function showProduct(e) {
+        if(e.target === button1) {
+            handleProduct1();
+        } else if (e.target === button2) {
+            handleProduct2();
+        } else if (e.target === button3) {
+            handleProduct3();
+        } else if (e.target === button4) {
+            handleProduct4();
+        } else {
+            handleProduct1();
+        }
+    }
+
+    handleProduct1();
+fetchProducts();
