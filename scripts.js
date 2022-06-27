@@ -73,6 +73,14 @@ async function fetchProducts() {
         }
    }
 
+   // sets URL Parameter for each product -> check also console
+   function setUrl (param) {
+    let url = new URL("http://127.0.0.1:5500/index.html");
+    url.searchParams.set("aud_device", param);
+    return console.log(url.toString());
+    
+}
+
    // shows the respective product when clicked
    let selector = document.getElementById('selector');
     selector.addEventListener("click", showProduct);
@@ -80,14 +88,19 @@ async function fetchProducts() {
     function showProduct(e) {
         if(e.target === button1) {
             handleProduct1();
+            setUrl('ricS');
         } else if (e.target === button2) {
             handleProduct2();
+            setUrl('ric');
         } else if (e.target === button3) {
             handleProduct3();
+            setUrl('ricR');
         } else if (e.target === button4) {
             handleProduct4();
+            setUrl('cic');
         } else {
             handleProduct1();
+            setUrl('ricS');
         }
     }
 
