@@ -4,9 +4,7 @@ let apiURL = 'https://api.jsonbin.io/b/6023a4c93b303d3d964e8ddf';
 async function fetchProducts() {
     let response = await fetch(apiURL);
     let product = await response.json();
-};
 
-fetchProducts();
     // structures the fetched data
     let headline = document.getElementById('headline');
     let image = document.getElementById('image');
